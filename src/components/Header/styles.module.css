@@ -1,0 +1,16 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D4E0F1;
+    grid-area: header;
+
+}
+
+.logoIFBA{
+    width: 35%;
+}
+
+.user{
+    color: #25559B;
+}

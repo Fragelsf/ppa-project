@@ -1,0 +1,27 @@
+.aside {
+  grid-area: aside;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: #d4e0f1;
+}
+
+.item {
+  transition: all 1s ease;
+  width: 0;
+  list-style: none;
+}
+
+.itemVisible {
+  width: 5rem;
+  transition: all 1s ease;
+  list-style: none;
+}
+
+@media (max-width: 420px) {
+  .aside {
+    /* display: none; */
+
+    width: 1rem;
+  }
+}

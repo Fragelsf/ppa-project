@@ -1,0 +1,59 @@
+  .form{
+    width: 25rem;
+  }
+
+  .title {
+    color: #25559B;
+    display: flex;
+    position: relative;
+    margin: 0.5rem;
+    align-items: baseline;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    font-family: cursive;
+  }
+  
+  .btnAcessar {
+    border: 0;
+    background-color: #25559B;
+    cursor: pointer;
+    color: #fff;
+    padding: 0.5rem;
+  }
+
+  .acesso{
+    display: flex;
+    justify-content: center;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px;
+  }
+
+  .wrapper {
+    position:relative;
+  }
+  
+  .icon {
+    padding: 4px;
+    position: absolute;
+    box-sizing:border-box;
+    top:50%;
+    left:2px;
+    transform: translateY(-50%);
+  }
+  
+  .input {
+    height: 30px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-left: 1.5rem;
+    border: 1px solid #d0d4d6;
+    width: 25rem;
+    margin-bottom: 10px;
+}
+  }
