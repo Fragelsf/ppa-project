@@ -15,36 +15,36 @@ import {
 
 import css from "./styles.module.css";
 
-interface DadosProps extends HTMLAttributes<HTMLDivElement> {
-  name: string;
-  email: string;
-  cpf: number;
-  phone: number;
-  rua: string;
-  bairro: string;
-  cidade: string;
-  nCasa: number;
-  pagamento: string;
-  frete: string;
-  vTotal: number;
-}
+// interface DadosProps extends HTMLAttributes<HTMLDivElement> {
+//   name: string;
+//   email: string;
+//   cpf: number;
+//   phone: number;
+//   rua: string;
+//   bairro: string;
+//   cidade: string;
+//   nCasa: number;
+//   pagamento: string;
+//   frete: string;
+//   vTotal: number;
+// }
 
-function ResultadoBusca(props: DadosProps) {
+function ResultadoBusca() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const {
-    name,
-    email,
-    cpf,
-    phone,
-    rua,
-    bairro,
-    cidade,
-    nCasa,
-    pagamento,
-    frete,
-    vTotal,
-    ...rest
-  } = props;
+  // const {
+  //   name,
+  //   email,
+  //   cpf,
+  //   phone,
+  //   rua,
+  //   bairro,
+  //   cidade,
+  //   nCasa,
+  //   pagamento,
+  //   frete,
+  //   vTotal,
+  //   ...rest
+  // } = props;
   return (
     <>
       <Header name={"maria"} />
@@ -69,7 +69,6 @@ function ResultadoBusca(props: DadosProps) {
                 <td data-label="Produto"> Disponivel </td>
 
                 <td data-label="Ação">
-                  {/* <button className={css.btnAcoes}>Ver descrição</button> */}
                   <Button className={css.btnAcoes} onClick={onOpen}>
                     Ver Descrição
                   </Button>
@@ -77,69 +76,31 @@ function ResultadoBusca(props: DadosProps) {
                     Requisitar
                   </Button>
 
-                  {/* <button className={css.btnAcoes}>Requisitar</button> */}
                 </td>
               </tr>
             </tbody>
           </table>
         </article>
 
-              <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay className={css.overplay}/>
-        <ModalContent className={css.containerModal}>
-          {/* <ModalHeader>Modal Title</ModalHeader> */}
-          <ModalBody>
-            <article className={css.card}>
-          <ModalCloseButton />
+        <Modal isOpen={isOpen} onClose={onClose}>
+          <ModalOverlay className={css.overplay} />
+          <ModalContent className={css.containerModal}>
+            <ModalBody>
+              <article className={css.card}>
+                <ModalCloseButton />
+                <h3 className={css.title}>Detalhes do Pedido</h3>
+              </article>
+            </ModalBody>
 
-              <h3 className={css.title}>Detalhes do Pedido</h3>
-              <p>
-                <strong>Data:</strong>{" "}
-              </p> 
-              <p>
-                <strong>Estado:</strong> Aberto
-              </p>
-              <p>
-                <strong>Pagamento:</strong> {pagamento}
-              </p>
-              <p>
-                <strong>Meio de pagamento:</strong>{" "}
-              </p>
-              <p>
-                <strong>Frete:</strong> Não enviado
-              </p>
-              <p>
-                <strong>Endereço de Envio:</strong>
-              </p>
-              <p>
-                <strong>Rua:</strong> {rua}
-              </p>
-              <p>
-                <strong>Bairro:</strong> {bairro}
-              </p>
-              <p>
-                <strong>Cidade:</strong> {cidade}
-              </p>
-              <p>
-                <strong>CPF:</strong> {cpf}
-              </p>
-              <p>
-                <strong>Número da casa:</strong> {nCasa}
-              </p>
-            </article>
-          </ModalBody>
-
-          {/* <ModalFooter>
+            {/* <ModalFooter>
           <Button colorScheme='blue' mr={3} onClick={onClose}>
             Close
           </Button>
           <Button variant='ghost'>Secondary Action</Button>
         </ModalFooter> */}
-        </ModalContent>
-      </Modal>
+          </ModalContent>
+        </Modal>
       </section>
-
-
     </>
   );
 }
